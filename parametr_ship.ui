@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Parametr_ship</class>
+ <widget class="QDialog" name="Parametr_ship">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1133</width>
+    <height>618</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>_NAME_SHIP_</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="0" column="0">
+    <widget class="QCustomPlot" name="FuelCourses" native="true">
+     <property name="minimumSize">
+      <size>
+       <width>551</width>
+       <height>411</height>
+      </size>
+     </property>
+     <zorder>MainChart</zorder>
+     <zorder>MainChart</zorder>
+    </widget>
+   </item>
+   <item row="0" column="1" colspan="3">
+    <widget class="QCustomPlot" name="MainChart" native="true">
+     <property name="minimumSize">
+      <size>
+       <width>551</width>
+       <height>411</height>
+      </size>
+     </property>
+     <zorder>FuelCourses</zorder>
+     <zorder>FuelCourses</zorder>
+     <zorder>FuelCourses</zorder>
+    </widget>
+   </item>
+   <item row="1" column="0" colspan="4">
+    <widget class="QTableView" name="TableViewCourses"/>
+   </item>
+   <item row="2" column="1">
+    <widget class="QPushButton" name="AddCourse">
+     <property name="text">
+      <string>Добавить маршрут</string>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="2">
+    <widget class="QPushButton" name="RemoveRecordCourse">
+     <property name="text">
+      <string>Удалить</string>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="3">
+    <widget class="QPushButton" name="pushButton">
+     <property name="text">
+      <string>Обновить</string>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>QCustomPlot</class>
+   <extends>QWidget</extends>
+   <header>qcustomplot.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
