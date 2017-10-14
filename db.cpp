@@ -41,7 +41,7 @@ bool DbManager::UpdateCourse(
       // you should check if args are ok first...
       QSqlQuery query;
       qDebug() << "Speed ship" << Speed;
-      query.prepare("UPDATE Course SET NameShip = :NameShip, Name_course = :Name_course, Speed_ship = :Speed_ship, SredSpeed_ship = :SredSpeed_ship, Ideal_time_course = :Ideal_time_course, Real_time_course = :Real_time_course, Oil = :Oil, Fuel = :Fuel, Size_course = :Size_course, Speed = :Speed;");
+      query.prepare("UPDATE Course SET NameShip = :NameShip, Name_course = :Name_course, Speed_ship = :Speed_ship, SredSpeed_ship = :SredSpeed_ship, Ideal_time_course = :Ideal_time_course, Real_time_course = :Real_time_course, Oil = :Oil, Fuel = :Fuel, Size_course = :Size_course, Speed = :Speed; where NameCourse like '"+NameCourse+"'");
       query.bindValue(":NameShip", NameShip);
       query.bindValue(":Name_course", NameCourse);
       query.bindValue(":Speed_ship", QString::number(SpeedShip));
@@ -120,6 +120,7 @@ bool DbManager::addSite(
     bool success = false;
       // you should check if args are ok first...
       QSqlQuery query;
+      qDebug() << "-> Name course which will add " << NameCourse;
 
       query.prepare("INSERT INTO Wind (NameShip, TimeSite, Beaufort_Scale, Wind_coeff, Wind_side, Name_course) VALUES (:NameShip, :TimeSite, :Beaufort_Scale, :Wind_coeff, :Wind_side, :Name_course);");
       query.bindValue(":NameShip", NameShip);

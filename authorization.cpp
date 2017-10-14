@@ -40,8 +40,11 @@
 *************************************************************************************************************/
 
 #include "authorization.h"
+#include "adminform.h"
 #include "mainwindow.h"
+#include "db.h"
 #include "ui_authorization.h"
+#include "ui_adminform.h"
 #include "ui_mainwindow.h"
 
 #include <QDebug>
@@ -63,8 +66,32 @@ Authorization::~Authorization()
 }
 
 void Authorization::on_pushButton_clicked()
+{       
+    DbManager db(path);
+        QSqlQuery query("SELECT Name, Password FROM Users where Name like '"+ui->NameUser->text()+"' and Password like '"+ui->PasswordUser->text()+"'");
+
+        while (query.next()) {
+            QString Name = query.value(0).toString();
+            QString Password = query.value(1).toString();
+            if(Name == "Adm" &&  Password == "123" )
+            {
+                qDebug() << "Admin input";
+                AdminForm *d = new AdminForm(this);
+                d->show();
+            }
+
+            if(Name != "Adm" && Name !="")
+            {
+                qDebug() << "User input";
+                MainWindow *d = new MainWindow(this);
+                d->setModal(true);
+                d->show();
+            }
+        }
+    db.CloseConection();
+}
+
+void Authorization::on_pushButton_2_clicked()
 {
-        MainWindow *d = new MainWindow(this);
-        d->setModal(true);
-        d->show();
+     exit(1);
 }

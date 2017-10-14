@@ -5,7 +5,7 @@
 #include "ui_add_site.h"
 
 bool flagSite = false;
-bool flagChange;
+bool flagChange = false;
 
 Add_course::Add_course(QWidget *parent, QString NameShip, bool Change, QString NameCourse, QString Speed, QString Distance, QString Oil, QString Fuel) :
     QDialog(parent),
@@ -369,6 +369,7 @@ void Add_course::on_ApplyButton_clicked()
         Fuel = ui->CountFuel->text();
     }
 
+    qDebug() << "-> Flag change =" << flagChange;
     if(flagChange == false)
     {
         db.AddCourse(this->NameShip, ui->NameCourse->text(), SpeedShip, SredSpeedShip, IdealTimeCourse, RealTimeCourse, Oil, Fuel, ui->Distance->text(), ui->SpeedShip->text());

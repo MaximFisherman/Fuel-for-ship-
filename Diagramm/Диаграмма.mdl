@@ -1,0 +1,1898 @@
+
+(object Petal
+    version    	50
+    _written   	"Rose 2006.0.0.060314"
+    charSet    	204)
+
+(object Design "Logical View"
+    is_unit    	TRUE
+    is_loaded  	TRUE
+    quid       	"598176CA01AF"
+    enforceClosureAutoLoad 	FALSE
+    defaults   	(object defaults
+	rightMargin 	0.250000
+	leftMargin 	0.250000
+	topMargin  	0.250000
+	bottomMargin 	0.500000
+	pageOverlap 	0.250000
+	clipIconLabels 	TRUE
+	autoResize 	TRUE
+	snapToGrid 	TRUE
+	gridX      	0
+	gridY      	0
+	defaultFont 	(object Font
+	    size       	10
+	    face       	"Arial"
+	    charSet    	204
+	    bold       	FALSE
+	    italics    	FALSE
+	    underline  	FALSE
+	    strike     	FALSE
+	    color      	0
+	    default_color 	TRUE)
+	showMessageNum 	3
+	showClassOfObject 	TRUE
+	notation   	"Unified")
+    root_usecase_package 	(object Class_Category "Use Case View"
+	quid       	"598176CA01B1"
+	exportControl 	"Public"
+	global     	TRUE
+	logical_models 	(list unit_reference_list
+	    (object Class "User"
+		quid       	"598176DB02E9"
+		stereotype 	"Actor")
+	    (object UseCase "Регистрация\\авторизация"
+		quid       	"598176F201D0"
+		superclasses 	(list inheritance_relationship_list
+		    (object Inheritance_Relationship
+			quid       	"598177160040"
+			supplier   	"Use Case View::Главное меню"
+			quidu      	"59817701017D")))
+	    (object UseCase "Главное меню"
+		quid       	"59817701017D"
+		superclasses 	(list inheritance_relationship_list
+		    (object Inheritance_Relationship
+			quid       	"59817EA10247"
+			supplier   	"Use Case View::Ввод показаний"
+			quidu      	"598179850307")
+		    (object Inheritance_Relationship
+			quid       	"59817EA400BA"
+			supplier   	"Use Case View::Судовые данные"
+			quidu      	"598179A7012F")
+		    (object Inheritance_Relationship
+			quid       	"59817EAA0019"
+			supplier   	"Use Case View::Работа с ГСМ"
+			quidu      	"598179E502A6")
+		    (object Inheritance_Relationship
+			quid       	"59817F19019E"
+			supplier   	"Use Case View::Просмотр текущих показаний"
+			quidu      	"59817722035C")))
+	    (object UseCase "Просмотр текущих показаний"
+		quid       	"59817722035C"
+		superclasses 	(list inheritance_relationship_list
+		    (object Inheritance_Relationship
+			quid       	"59817E9902F7"
+			supplier   	"Use Case View::Вывод текущего расхода ГСМ"
+			quidu      	"59817E4F033F")
+		    (object Inheritance_Relationship
+			quid       	"59817E9C0207"
+			supplier   	"Use Case View::Запас хода"
+			quidu      	"59817E5D03E3")
+		    (object Inheritance_Relationship
+			quid       	"59817E9E021D"
+			supplier   	"Use Case View::Аварийные запасы"
+			quidu      	"59817E640083")))
+	    (object UseCase "Ввод показаний"
+		quid       	"598179850307"
+		superclasses 	(list inheritance_relationship_list
+		    (object Inheritance_Relationship
+			quid       	"59817C280001"
+			supplier   	"Use Case View::Погодные условия"
+			quidu      	"59817BF0038F")
+		    (object Inheritance_Relationship
+			quid       	"59817C2A0214"
+			supplier   	"Use Case View::Нагруженность судна"
+			quidu      	"59817BE70102")
+		    (object Inheritance_Relationship
+			quid       	"59817C2C034C"
+			supplier   	"Use Case View::Скорость"
+			quidu      	"59817BCD00CA")
+		    (object Inheritance_Relationship
+			quid       	"59817C2E0385"
+			supplier   	"Use Case View::Расстояние"
+			quidu      	"59817BD801C3")))
+	    (object UseCase "Судовые данные"
+		quid       	"598179A7012F"
+		superclasses 	(list inheritance_relationship_list
+		    (object Inheritance_Relationship
+			quid       	"59817AD10230"
+			supplier   	"Use Case View::Прочая информация"
+			quidu      	"59817A49031A")
+		    (object Inheritance_Relationship
+			quid       	"59817AD303D8"
+			supplier   	"Use Case View::Двигатель"
+			quidu      	"59817A19022E")
+		    (object Inheritance_Relationship
+			quid       	"59817AD601FC"
+			supplier   	"Use Case View::Габариты судна"
+			quidu      	"59817A0D03CE")
+		    (object Inheritance_Relationship
+			quid       	"59817AD803E5"
+			supplier   	"Use Case View::Тип судна"
+			quidu      	"59817A0700FC"))
+		visible_modules 	(list dependency_list
+		    (object Dependency_Relationship
+			quid       	"59817C4E00A6"
+			supplier   	"Use Case View::БД"
+			quidu      	"59817C410023")))
+	    (object UseCase "Работа с ГСМ"
+		quid       	"598179E502A6"
+		superclasses 	(list inheritance_relationship_list
+		    (object Inheritance_Relationship
+			quid       	"59817B93025C"
+			supplier   	"Use Case View::Тип ГСМ"
+			quidu      	"59817B230119")))
+	    (object UseCase "Тип судна"
+		quid       	"59817A0700FC")
+	    (object UseCase "Габариты судна"
+		quid       	"59817A0D03CE")
+	    (object UseCase "Двигатель"
+		quid       	"59817A19022E")
+	    (object UseCase "Прочая информация"
+		quid       	"59817A49031A")
+	    (object UseCase "Добавить двигатель"
+		quid       	"59817A690162"
+		superclasses 	(list inheritance_relationship_list
+		    (object Inheritance_Relationship
+			quid       	"59817B03023A"
+			supplier   	"Use Case View::Характеристики двигателя"
+			quidu      	"59817AF0031F"))
+		visible_modules 	(list dependency_list
+		    (object Dependency_Relationship
+			quid       	"59817AC80389"
+			supplier   	"Use Case View::Двигатель"
+			quidu      	"59817A19022E")))
+	    (object UseCase "Статус двигателя"
+		quid       	"59817A70037B"
+		superclasses 	(list inheritance_relationship_list
+		    (object Inheritance_Relationship
+			quid       	"59817AFD0310"
+			supplier   	"Use Case View::Активен"
+			quidu      	"59817AE00169")
+		    (object Inheritance_Relationship
+			quid       	"59817B00015E"
+			supplier   	"Use Case View::Неактивен"
+			quidu      	"59817AE70188"))
+		visible_modules 	(list dependency_list
+		    (object Dependency_Relationship
+			quid       	"59817ACB02BA"
+			supplier   	"Use Case View::Двигатель"
+			quidu      	"59817A19022E")))
+	    (object UseCase "Флаг"
+		quid       	"59817A830035"
+		visible_modules 	(list dependency_list
+		    (object Dependency_Relationship
+			quid       	"59817AB70154"
+			supplier   	"Use Case View::Прочая информация"
+			quidu      	"59817A49031A")))
+	    (object UseCase "Год постройки"
+		quid       	"59817A8900B1"
+		visible_modules 	(list dependency_list
+		    (object Dependency_Relationship
+			quid       	"59817ABA02E0"
+			supplier   	"Use Case View::Прочая информация"
+			quidu      	"59817A49031A")))
+	    (object UseCase "Судовладелец"
+		quid       	"59817A9002E9"
+		visible_modules 	(list dependency_list
+		    (object Dependency_Relationship
+			quid       	"59817ABD0246"
+			supplier   	"Use Case View::Прочая информация"
+			quidu      	"59817A49031A")))
+	    (object UseCase "Проверка состояния судна"
+		quid       	"59817AA1000F"
+		visible_modules 	(list dependency_list
+		    (object Dependency_Relationship
+			quid       	"59817AC40030"
+			supplier   	"Use Case View::Прочая информация"
+			quidu      	"59817A49031A")))
+	    (object UseCase "Активен"
+		quid       	"59817AE00169")
+	    (object UseCase "Неактивен"
+		quid       	"59817AE70188")
+	    (object UseCase "Характеристики двигателя"
+		quid       	"59817AF0031F")
+	    (object UseCase "Тип ГСМ"
+		quid       	"59817B230119")
+	    (object UseCase "Топливо"
+		quid       	"59817B2D034E"
+		superclasses 	(list inheritance_relationship_list
+		    (object Inheritance_Relationship
+			quid       	"59817B9D021A"
+			supplier   	"Use Case View::Норма потребления"
+			quidu      	"59817B5503DC"))
+		visible_modules 	(list dependency_list
+		    (object Dependency_Relationship
+			quid       	"59817B960095"
+			supplier   	"Use Case View::Тип ГСМ"
+			quidu      	"59817B230119")))
+	    (object UseCase "Масла"
+		quid       	"59817B340068"
+		superclasses 	(list inheritance_relationship_list
+		    (object Inheritance_Relationship
+			quid       	"59817B9F03B5"
+			supplier   	"Use Case View::Норма потребления"
+			quidu      	"59817B5503DC"))
+		visible_modules 	(list dependency_list
+		    (object Dependency_Relationship
+			quid       	"59817B9800A5"
+			supplier   	"Use Case View::Тип ГСМ"
+			quidu      	"59817B230119")))
+	    (object UseCase "Смазки"
+		quid       	"59817B3900D8"
+		superclasses 	(list inheritance_relationship_list
+		    (object Inheritance_Relationship
+			quid       	"59817BA2029F"
+			supplier   	"Use Case View::Норма потребления"
+			quidu      	"59817B5503DC"))
+		visible_modules 	(list dependency_list
+		    (object Dependency_Relationship
+			quid       	"59817B9A0229"
+			supplier   	"Use Case View::Тип ГСМ"
+			quidu      	"59817B230119")))
+	    (object UseCase "Норма потребления"
+		quid       	"59817B5503DC")
+	    (object UseCase "Марка топлива"
+		quid       	"59817B6A0099"
+		visible_modules 	(list dependency_list
+		    (object Dependency_Relationship
+			quid       	"59817BA50242"
+			supplier   	"Use Case View::Норма потребления"
+			quidu      	"59817B5503DC")
+		    (object Dependency_Relationship
+			quid       	"59817CA2017A"
+			supplier   	"Use Case View::БД"
+			quidu      	"59817C410023")))
+	    (object UseCase "Марка масла"
+		quid       	"59817B7E0277"
+		visible_modules 	(list dependency_list
+		    (object Dependency_Relationship
+			quid       	"59817BA70304"
+			supplier   	"Use Case View::Норма потребления"
+			quidu      	"59817B5503DC")
+		    (object Dependency_Relationship
+			quid       	"59817C9F02C9"
+			supplier   	"Use Case View::БД"
+			quidu      	"59817C410023")))
+	    (object UseCase "Тип смазки"
+		quid       	"59817B89021F"
+		visible_modules 	(list dependency_list
+		    (object Dependency_Relationship
+			quid       	"59817BAA00CB"
+			supplier   	"Use Case View::Норма потребления"
+			quidu      	"59817B5503DC")
+		    (object Dependency_Relationship
+			quid       	"59817C9D008D"
+			supplier   	"Use Case View::БД"
+			quidu      	"59817C410023")))
+	    (object UseCase "Скорость"
+		quid       	"59817BCD00CA"
+		superclasses 	(list inheritance_relationship_list
+		    (object Inheritance_Relationship
+			quid       	"59817C6800FB"
+			supplier   	"Use Case View::Сохранение"
+			quidu      	"59817C590362")))
+	    (object UseCase "Расстояние"
+		quid       	"59817BD801C3"
+		superclasses 	(list inheritance_relationship_list
+		    (object Inheritance_Relationship
+			quid       	"59817C6B018E"
+			supplier   	"Use Case View::Сохранение"
+			quidu      	"59817C590362")))
+	    (object UseCase "Нагруженность судна"
+		quid       	"59817BE70102"
+		superclasses 	(list inheritance_relationship_list
+		    (object Inheritance_Relationship
+			quid       	"59817C6502E3"
+			supplier   	"Use Case View::Сохранение"
+			quidu      	"59817C590362")))
+	    (object UseCase "Погодные условия"
+		quid       	"59817BF0038F"
+		superclasses 	(list inheritance_relationship_list
+		    (object Inheritance_Relationship
+			quid       	"59817C63005E"
+			supplier   	"Use Case View::Сохранение"
+			quidu      	"59817C590362")))
+	    (object UseCase "Сохранение"
+		quid       	"59817C590362"
+		visible_modules 	(list dependency_list
+		    (object Dependency_Relationship
+			quid       	"59817C6E01BC"
+			supplier   	"Use Case View::БД"
+			quidu      	"59817C410023")))
+	    (object UseCase "Вывод текущего расхода ГСМ"
+		quid       	"59817E4F033F")
+	    (object UseCase "Запас хода"
+		quid       	"59817E5D03E3")
+	    (object UseCase "Аварийные запасы"
+		quid       	"59817E640083")
+	    (object Association "$UNNAMED$0"
+		quid       	"598177120343"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$1"
+			quid       	"59817713010A"
+			supplier   	"Use Case View::Регистрация\\\\авторизация"
+			quidu      	"598176F201D0"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$2"
+			quid       	"598177130135"
+			supplier   	"Use Case View::User"
+			quidu      	"598176DB02E9")))
+	    (object Class_Category "БД"
+		quid       	"59817C410023"
+		visible_modules 	(list dependency_list
+		    (object Dependency_Relationship
+			quid       	"59817C5300D7"
+			supplier   	"Use Case View::Судовые данные"
+			quidu      	"598179A7012F")
+		    (object Dependency_Relationship
+			quid       	"59817C71021D"
+			supplier   	"Use Case View::Сохранение"
+			quidu      	"59817C590362")
+		    (object Dependency_Relationship
+			quid       	"59817C950117"
+			supplier   	"Use Case View::Марка топлива"
+			quidu      	"59817B6A0099")
+		    (object Dependency_Relationship
+			quid       	"59817C97025A"
+			supplier   	"Use Case View::Марка масла"
+			quidu      	"59817B7E0277")
+		    (object Dependency_Relationship
+			quid       	"59817C9A013C"
+			supplier   	"Use Case View::Тип смазки"
+			quidu      	"59817B89021F"))
+		exportControl 	"Public"
+		logical_models 	(list unit_reference_list)
+		logical_presentations 	(list unit_reference_list)))
+	logical_presentations 	(list unit_reference_list
+	    (object UseCaseDiagram "Main"
+		quid       	"598176CB0227"
+		title      	"Main"
+		zoom       	100
+		max_height 	28350
+		max_width  	21600
+		origin_x   	0
+		origin_y   	1193
+		items      	(list diagram_item_list
+		    (object UseCaseView "Use Case View::Главное меню" @1
+			location   	(1251, 915)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@1
+			    location   	(1251, 1053)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	630
+			    justify    	0
+			    label      	"Главное меню")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"59817701017D"
+			height     	118)
+		    (object ClassView "Class" "Use Case View::User" @2
+			ShowCompartmentStereotypes 	TRUE
+			IncludeAttribute 	TRUE
+			IncludeOperation 	TRUE
+			location   	(344, 141)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@2
+			    location   	(344, 301)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	325
+			    justify    	0
+			    label      	"User")
+			icon       	"Actor"
+			icon_style 	"Icon"
+			line_color 	3342489
+			quidu      	"598176DB02E9"
+			annotation 	8
+			autoResize 	TRUE)
+		    (object UseCaseView "Use Case View::Регистрация\\\\авторизация" @3
+			location   	(828, 365)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@3
+			    location   	(828, 503)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	630
+			    justify    	0
+			    label      	"Регистрация\\авторизация")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"598176F201D0"
+			height     	118)
+		    (object AssociationViewNew "$UNNAMED$0" @4
+			location   	(558, 238)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"598177120343"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$1" @5
+				Parent_View 	@4
+				location   	(214, 97)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"59817713010A"
+				client     	@4
+				supplier   	@3
+				vertices   	(list Points
+				    (558, 238)
+				    (716, 311))
+				line_style 	0)
+			    (object RoleView "$UNNAMED$2" @6
+				Parent_View 	@4
+				location   	(214, 97)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"598177130135"
+				client     	@4
+				supplier   	@2
+				vertices   	(list Points
+				    (558, 238)
+				    (401, 166))
+				line_style 	0)))
+		    (object InheritView "" @7
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"598177160040"
+			client     	@3
+			supplier   	@1
+			vertices   	(list Points
+			    (953, 528)
+			    (1205, 856))
+			line_style 	0)
+		    (object UseCaseView "Use Case View::Просмотр текущих показаний" @8
+			location   	(1654, 562)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@8
+			    location   	(1654, 700)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	630
+			    justify    	0
+			    label      	"Просмотр текущих показаний")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"59817722035C"
+			height     	118)
+		    (object UseCaseView "Use Case View::Ввод показаний" @9
+			location   	(2261, 834)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@9
+			    location   	(2261, 972)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	630
+			    justify    	0
+			    label      	"Ввод показаний")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"598179850307"
+			height     	118)
+		    (object UseCaseView "Use Case View::Судовые данные" @10
+			location   	(2100, 1153)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@10
+			    location   	(2100, 1291)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	630
+			    justify    	0
+			    label      	"Судовые данные")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"598179A7012F"
+			height     	118)
+		    (object UseCaseView "Use Case View::Работа с ГСМ" @11
+			location   	(568, 1112)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@11
+			    location   	(568, 1250)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	630
+			    justify    	0
+			    label      	"Работа с ГСМ")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"598179E502A6"
+			height     	118)
+		    (object UseCaseView "Use Case View::Тип судна" @12
+			location   	(2734, 1503)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@12
+			    location   	(2734, 1641)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	630
+			    justify    	0
+			    label      	"Тип судна")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"59817A0700FC"
+			height     	118)
+		    (object UseCaseView "Use Case View::Габариты судна" @13
+			location   	(2375, 1525)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@13
+			    location   	(2375, 1663)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	630
+			    justify    	0
+			    label      	"Габариты судна")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"59817A0D03CE"
+			height     	118)
+		    (object UseCaseView "Use Case View::Двигатель" @14
+			location   	(2013, 1550)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@14
+			    location   	(2013, 1688)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	630
+			    justify    	0
+			    label      	"Двигатель")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"59817A19022E"
+			height     	118)
+		    (object UseCaseView "Use Case View::Прочая информация" @15
+			location   	(1663, 1556)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@15
+			    location   	(1663, 1694)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	630
+			    justify    	0
+			    label      	"Прочая информация")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"59817A49031A"
+			height     	118)
+		    (object UseCaseView "Use Case View::Добавить двигатель" @16
+			location   	(2082, 1956)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@16
+			    location   	(2082, 2094)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	630
+			    justify    	0
+			    label      	"Добавить двигатель")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"59817A690162"
+			height     	118)
+		    (object UseCaseView "Use Case View::Статус двигателя" @17
+			location   	(2529, 1948)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@17
+			    location   	(2529, 2086)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	630
+			    justify    	0
+			    label      	"Статус двигателя")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"59817A70037B"
+			height     	118)
+		    (object UseCaseView "Use Case View::Флаг" @18
+			location   	(1363, 1909)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@18
+			    location   	(1363, 2047)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	630
+			    justify    	0
+			    label      	"Флаг")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"59817A830035"
+			height     	118)
+		    (object UseCaseView "Use Case View::Год постройки" @19
+			location   	(1375, 2181)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@19
+			    location   	(1375, 2319)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	630
+			    justify    	0
+			    label      	"Год постройки")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"59817A8900B1"
+			height     	118)
+		    (object UseCaseView "Use Case View::Судовладелец" @20
+			location   	(1544, 2424)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@20
+			    location   	(1544, 2562)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	630
+			    justify    	0
+			    label      	"Судовладелец")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"59817A9002E9"
+			height     	118)
+		    (object UseCaseView "Use Case View::Проверка состояния судна" @21
+			location   	(1716, 2654)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@21
+			    location   	(1716, 2792)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	630
+			    justify    	0
+			    label      	"Проверка состояния судна")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"59817AA1000F"
+			height     	118)
+		    (object DependencyView "" @22
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"59817AB70154"
+			client     	@18
+			supplier   	@15
+			vertices   	(list Points
+			    (1407, 1850)
+			    (1525, 1719))
+			line_style 	0)
+		    (object DependencyView "" @23
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"59817ABA02E0"
+			client     	@19
+			supplier   	@15
+			vertices   	(list Points
+			    (1398, 2122)
+			    (1585, 1719))
+			line_style 	0)
+		    (object DependencyView "" @24
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"59817ABD0246"
+			client     	@20
+			supplier   	@15
+			vertices   	(list Points
+			    (1549, 2365)
+			    (1638, 1719))
+			line_style 	0)
+		    (object DependencyView "" @25
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"59817AC40030"
+			client     	@21
+			supplier   	@15
+			vertices   	(list Points
+			    (1710, 2595)
+			    (1669, 1719))
+			line_style 	0)
+		    (object DependencyView "" @26
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"59817AC80389"
+			client     	@16
+			supplier   	@14
+			vertices   	(list Points
+			    (2067, 1898)
+			    (2038, 1713))
+			line_style 	0)
+		    (object DependencyView "" @27
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"59817ACB02BA"
+			client     	@17
+			supplier   	@14
+			vertices   	(list Points
+			    (2455, 1890)
+			    (2113, 1627))
+			line_style 	0)
+		    (object InheritView "" @28
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"59817AD10230"
+			client     	@10
+			supplier   	@15
+			vertices   	(list Points
+			    (1933, 1308)
+			    (1722, 1498))
+			line_style 	0)
+		    (object InheritView "" @29
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"59817AD303D8"
+			client     	@10
+			supplier   	@14
+			vertices   	(list Points
+			    (2062, 1316)
+			    (2022, 1492))
+			line_style 	0)
+		    (object InheritView "" @30
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"59817AD601FC"
+			client     	@10
+			supplier   	@13
+			vertices   	(list Points
+			    (2221, 1316)
+			    (2330, 1466))
+			line_style 	0)
+		    (object InheritView "" @31
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"59817AD803E5"
+			client     	@10
+			supplier   	@12
+			vertices   	(list Points
+			    (2266, 1242)
+			    (2630, 1444))
+			line_style 	0)
+		    (object UseCaseView "Use Case View::Активен" @32
+			location   	(2485, 2305)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@32
+			    location   	(2485, 2443)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	630
+			    justify    	0
+			    label      	"Активен")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"59817AE00169"
+			height     	118)
+		    (object UseCaseView "Use Case View::Неактивен" @33
+			location   	(2769, 2310)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@33
+			    location   	(2769, 2448)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	630
+			    justify    	0
+			    label      	"Неактивен")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"59817AE70188"
+			height     	118)
+		    (object UseCaseView "Use Case View::Характеристики двигателя" @34
+			location   	(2058, 2293)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@34
+			    location   	(2058, 2431)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	630
+			    justify    	0
+			    label      	"Характеристики двигателя")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"59817AF0031F"
+			height     	118)
+		    (object InheritView "" @35
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"59817AFD0310"
+			client     	@17
+			supplier   	@32
+			vertices   	(list Points
+			    (2506, 2111)
+			    (2489, 2247))
+			line_style 	0)
+		    (object InheritView "" @36
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"59817B00015E"
+			client     	@17
+			supplier   	@33
+			vertices   	(list Points
+			    (2634, 2111)
+			    (2729, 2252))
+			line_style 	0)
+		    (object InheritView "" @37
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"59817B03023A"
+			client     	@16
+			supplier   	@34
+			vertices   	(list Points
+			    (2067, 2119)
+			    (2060, 2233))
+			line_style 	0)
+		    (object UseCaseView "Use Case View::Тип ГСМ" @38
+			location   	(571, 1455)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@38
+			    location   	(571, 1593)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	630
+			    justify    	0
+			    label      	"Тип ГСМ")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"59817B230119"
+			height     	118)
+		    (object UseCaseView "Use Case View::Топливо" @39
+			location   	(225, 1824)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@39
+			    location   	(225, 1962)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	630
+			    justify    	0
+			    label      	"Топливо")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"59817B2D034E"
+			height     	118)
+		    (object UseCaseView "Use Case View::Масла" @40
+			location   	(584, 1808)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@40
+			    location   	(584, 1946)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	630
+			    justify    	0
+			    label      	"Масла")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"59817B340068"
+			height     	118)
+		    (object UseCaseView "Use Case View::Смазки" @41
+			location   	(899, 1815)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@41
+			    location   	(899, 1953)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	630
+			    justify    	0
+			    label      	"Смазки")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"59817B3900D8"
+			height     	118)
+		    (object UseCaseView "Use Case View::Норма потребления" @42
+			location   	(581, 2208)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@42
+			    location   	(581, 2346)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	630
+			    justify    	0
+			    label      	"Норма потребления")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"59817B5503DC"
+			height     	118)
+		    (object UseCaseView "Use Case View::Марка топлива" @43
+			location   	(200, 2514)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@43
+			    location   	(200, 2652)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	630
+			    justify    	0
+			    label      	"Марка топлива")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"59817B6A0099"
+			height     	118)
+		    (object UseCaseView "Use Case View::Марка масла" @44
+			location   	(584, 2521)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@44
+			    location   	(584, 2659)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	630
+			    justify    	0
+			    label      	"Марка масла")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"59817B7E0277"
+			height     	118)
+		    (object UseCaseView "Use Case View::Тип смазки" @45
+			location   	(987, 2546)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@45
+			    location   	(987, 2684)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	630
+			    justify    	0
+			    label      	"Тип смазки")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"59817B89021F"
+			height     	118)
+		    (object InheritView "" @46
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"59817B93025C"
+			client     	@11
+			supplier   	@38
+			vertices   	(list Points
+			    (568, 1275)
+			    (567, 1397))
+			line_style 	0)
+		    (object DependencyView "" @47
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"59817B960095"
+			client     	@39
+			supplier   	@38
+			vertices   	(list Points
+			    (275, 1765)
+			    (485, 1543))
+			line_style 	0)
+		    (object DependencyView "" @48
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"59817B9800A5"
+			client     	@40
+			supplier   	@38
+			vertices   	(list Points
+			    (580, 1749)
+			    (575, 1618))
+			line_style 	0)
+		    (object DependencyView "" @49
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"59817B9A0229"
+			client     	@41
+			supplier   	@38
+			vertices   	(list Points
+			    (845, 1757)
+			    (654, 1548))
+			line_style 	0)
+		    (object InheritView "" @50
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"59817B9D021A"
+			client     	@39
+			supplier   	@42
+			vertices   	(list Points
+			    (305, 1910)
+			    (528, 2150))
+			line_style 	0)
+		    (object InheritView "" @51
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"59817B9F03B5"
+			client     	@40
+			supplier   	@42
+			vertices   	(list Points
+			    (580, 1971)
+			    (581, 2150))
+			line_style 	0)
+		    (object InheritView "" @52
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"59817BA2029F"
+			client     	@41
+			supplier   	@42
+			vertices   	(list Points
+			    (821, 1906)
+			    (624, 2150))
+			line_style 	0)
+		    (object DependencyView "" @53
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"59817BA50242"
+			client     	@43
+			supplier   	@42
+			vertices   	(list Points
+			    (266, 2456)
+			    (392, 2359))
+			line_style 	0)
+		    (object DependencyView "" @54
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"59817BA70304"
+			client     	@44
+			supplier   	@42
+			vertices   	(list Points
+			    (580, 2462)
+			    (581, 2371))
+			line_style 	0)
+		    (object DependencyView "" @55
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"59817BAA00CB"
+			client     	@45
+			supplier   	@42
+			vertices   	(list Points
+			    (915, 2486)
+			    (769, 2364))
+			line_style 	0)
+		    (object UseCaseView "Use Case View::Скорость" @56
+			location   	(2892, 915)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@56
+			    location   	(2892, 1053)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	630
+			    justify    	0
+			    label      	"Скорость")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"59817BCD00CA"
+			height     	118)
+		    (object UseCaseView "Use Case View::Расстояние" @57
+			location   	(2889, 1112)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@57
+			    location   	(2889, 1250)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	630
+			    justify    	0
+			    label      	"Расстояние")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"59817BD801C3"
+			height     	118)
+		    (object UseCaseView "Use Case View::Нагруженность судна" @58
+			location   	(2888, 706)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@58
+			    location   	(2888, 844)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	630
+			    justify    	0
+			    label      	"Нагруженность судна")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"59817BE70102"
+			height     	118)
+		    (object UseCaseView "Use Case View::Погодные условия" @59
+			location   	(2895, 502)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@59
+			    location   	(2895, 640)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	630
+			    justify    	0
+			    label      	"Погодные условия")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"59817BF0038F"
+			height     	118)
+		    (object InheritView "" @60
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"59817C280001"
+			client     	@9
+			supplier   	@59
+			vertices   	(list Points
+			    (2365, 775)
+			    (2713, 595))
+			line_style 	0)
+		    (object InheritView "" @61
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"59817C2A0214"
+			client     	@9
+			supplier   	@58
+			vertices   	(list Points
+			    (2369, 809)
+			    (2778, 725))
+			line_style 	0)
+		    (object InheritView "" @62
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"59817C2C034C"
+			client     	@9
+			supplier   	@56
+			vertices   	(list Points
+			    (2369, 845)
+			    (2782, 899))
+			line_style 	0)
+		    (object InheritView "" @63
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"59817C2E0385"
+			client     	@9
+			supplier   	@57
+			vertices   	(list Points
+			    (2417, 901)
+			    (2779, 1063))
+			line_style 	0)
+		    (object CategoryView "Use Case View::БД" @64
+			location   	(3360, 1565)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@64
+			    location   	(3216, 1481)
+			    fill_color 	13434879
+			    nlines     	2
+			    max_width  	288
+			    justify    	0
+			    label      	"БД")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"59817C410023"
+			width      	300
+			height     	180)
+		    (object DependencyView "" @65
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"59817C4E00A6"
+			client     	@10
+			supplier   	@64
+			vertices   	(list Points
+			    (2208, 1185)
+			    (3209, 1515))
+			line_style 	0)
+		    (object DependencyView "" @66
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"59817C5300D7"
+			client     	@64
+			supplier   	@10
+			vertices   	(list Points
+			    (3209, 1515)
+			    (2208, 1185))
+			line_style 	0)
+		    (object UseCaseView "Use Case View::Сохранение" @67
+			location   	(3323, 916)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@67
+			    location   	(3323, 1054)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	630
+			    justify    	0
+			    label      	"Сохранение")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"59817C590362"
+			height     	118)
+		    (object InheritView "" @68
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"59817C63005E"
+			client     	@59
+			supplier   	@67
+			vertices   	(list Points
+			    (3063, 665)
+			    (3262, 857))
+			line_style 	0)
+		    (object InheritView "" @69
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"59817C6502E3"
+			client     	@58
+			supplier   	@67
+			vertices   	(list Points
+			    (3099, 806)
+			    (3212, 861))
+			line_style 	0)
+		    (object InheritView "" @70
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"59817C6800FB"
+			client     	@56
+			supplier   	@67
+			vertices   	(list Points
+			    (3000, 914)
+			    (3212, 914))
+			line_style 	0)
+		    (object InheritView "" @71
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"59817C6B018E"
+			client     	@57
+			supplier   	@67
+			vertices   	(list Points
+			    (2997, 1058)
+			    (3205, 967))
+			line_style 	0)
+		    (object DependencyView "" @72
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"59817C6E01BC"
+			client     	@67
+			supplier   	@64
+			vertices   	(list Points
+			    (3330, 1079)
+			    (3350, 1420))
+			line_style 	0)
+		    (object DependencyView "" @73
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"59817C71021D"
+			client     	@64
+			supplier   	@67
+			vertices   	(list Points
+			    (3350, 1420)
+			    (3330, 1079))
+			line_style 	0)
+		    (object CategoryView "Use Case View::БД" @74
+			location   	(581, 2989)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@74
+			    location   	(437, 2905)
+			    fill_color 	13434879
+			    nlines     	2
+			    max_width  	288
+			    justify    	0
+			    label      	"БД")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"59817C410023"
+			width      	300
+			height     	180)
+		    (object DependencyView "" @75
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"59817C950117"
+			client     	@74
+			supplier   	@43
+			vertices   	(list Points
+			    (464, 2844)
+			    (330, 2677))
+			line_style 	0)
+		    (object DependencyView "" @76
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"59817C97025A"
+			client     	@74
+			supplier   	@44
+			vertices   	(list Points
+			    (581, 2844)
+			    (580, 2684))
+			line_style 	0)
+		    (object DependencyView "" @77
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"59817C9A013C"
+			client     	@74
+			supplier   	@45
+			vertices   	(list Points
+			    (711, 2844)
+			    (874, 2662))
+			line_style 	0)
+		    (object DependencyView "" @78
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"59817C9D008D"
+			client     	@45
+			supplier   	@74
+			vertices   	(list Points
+			    (874, 2662)
+			    (711, 2844))
+			line_style 	0)
+		    (object DependencyView "" @79
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"59817C9F02C9"
+			client     	@44
+			supplier   	@74
+			vertices   	(list Points
+			    (580, 2684)
+			    (581, 2844))
+			line_style 	0)
+		    (object DependencyView "" @80
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"59817CA2017A"
+			client     	@43
+			supplier   	@74
+			vertices   	(list Points
+			    (330, 2677)
+			    (464, 2844))
+			line_style 	0)
+		    (object UseCaseView "Use Case View::Вывод текущего расхода ГСМ" @81
+			location   	(1829, 137)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@81
+			    location   	(1829, 275)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	630
+			    justify    	0
+			    label      	"Вывод текущего расхода ГСМ")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"59817E4F033F"
+			height     	118)
+		    (object UseCaseView "Use Case View::Запас хода" @82
+			location   	(2360, 250)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@82
+			    location   	(2360, 388)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	630
+			    justify    	0
+			    label      	"Запас хода")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"59817E5D03E3"
+			height     	118)
+		    (object UseCaseView "Use Case View::Аварийные запасы" @83
+			location   	(2254, 553)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@83
+			    location   	(2254, 691)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	630
+			    justify    	0
+			    label      	"Аварийные запасы")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"59817E640083"
+			height     	118)
+		    (object InheritView "" @84
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"59817E9902F7"
+			client     	@8
+			supplier   	@81
+			vertices   	(list Points
+			    (1675, 502)
+			    (1758, 300))
+			line_style 	0)
+		    (object InheritView "" @85
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"59817E9C0207"
+			client     	@8
+			supplier   	@82
+			vertices   	(list Points
+			    (1762, 511)
+			    (2250, 293))
+			line_style 	0)
+		    (object InheritView "" @86
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"59817E9E021D"
+			client     	@8
+			supplier   	@83
+			vertices   	(list Points
+			    (1762, 558)
+			    (2144, 552))
+			line_style 	0)
+		    (object InheritView "" @87
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"59817EA10247"
+			client     	@1
+			supplier   	@9
+			vertices   	(list Points
+			    (1359, 902)
+			    (2151, 839))
+			line_style 	0)
+		    (object InheritView "" @88
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"59817EA400BA"
+			client     	@1
+			supplier   	@10
+			vertices   	(list Points
+			    (1359, 942)
+			    (1990, 1120))
+			line_style 	0)
+		    (object InheritView "" @89
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"59817EAA0019"
+			client     	@1
+			supplier   	@11
+			vertices   	(list Points
+			    (1140, 943)
+			    (676, 1078))
+			line_style 	0)
+		    (object InheritView "" @90
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"59817F19019E"
+			client     	@1
+			supplier   	@8
+			vertices   	(list Points
+			    (1313, 856)
+			    (1467, 725))
+			line_style 	0)))))
+    root_category 	(object Class_Category "Logical View"
+	quid       	"598176CA01B0"
+	exportControl 	"Public"
+	global     	TRUE
+	subsystem  	"Component View"
+	quidu      	"598176CA01B2"
+	logical_models 	(list unit_reference_list)
+	logical_presentations 	(list unit_reference_list
+	    (object ClassDiagram "Main"
+		quid       	"598176CB0236"
+		title      	"Main"
+		zoom       	100
+		max_height 	28350
+		max_width  	21600
+		origin_x   	0
+		origin_y   	0
+		items      	(list diagram_item_list))))
+    root_subsystem 	(object SubSystem "Component View"
+	quid       	"598176CA01B2"
+	physical_models 	(list unit_reference_list)
+	physical_presentations 	(list unit_reference_list
+	    (object Module_Diagram "Main"
+		quid       	"598176CB0226"
+		title      	"Main"
+		zoom       	100
+		max_height 	28350
+		max_width  	21600
+		origin_x   	0
+		origin_y   	0
+		items      	(list diagram_item_list)))
+	category   	"Logical View"
+	quidu      	"598176CA01B0")
+    process_structure 	(object Processes
+	quid       	"598176CA01B3"
+	ProcsNDevs 	(list
+	    (object Process_Diagram "Deployment View"
+		quid       	"598176CA01BF"
+		title      	"Deployment View"
+		zoom       	100
+		max_height 	28350
+		max_width  	21600
+		origin_x   	0
+		origin_y   	0
+		items      	(list diagram_item_list))))
+    properties 	(object Properties
+	quid       	"598176CA01B4"))

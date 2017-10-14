@@ -5,7 +5,7 @@
 QT       += core gui sql
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets printsupport
 
-TARGET = plot-examples
+TARGET = FuelForShip
 TEMPLATE = app
 
 SOURCES += main.cpp\
@@ -17,7 +17,8 @@ SOURCES += main.cpp\
     dialog_add_ship.cpp \
     add_course.cpp \
     add_site.cpp \
-    parametr_ship.cpp
+    parametr_ship.cpp \
+    adminform.cpp
 
 HEADERS  += \
     qcustomplot.h \
@@ -30,7 +31,8 @@ HEADERS  += \
     dialog_add_ship.h \
     add_course.h \
     add_site.h \
-    parametr_ship.h
+    parametr_ship.h \
+    adminform.h
 
 FORMS    += \
     authorization.ui \
@@ -40,5 +42,6 @@ FORMS    += \
     dialog_add_ship.ui \
     add_course.ui \
     add_site.ui \
-    parametr_ship.ui
+    parametr_ship.ui \
+    adminform.ui
 
