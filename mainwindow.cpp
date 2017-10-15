@@ -17,6 +17,7 @@ MainWindow::MainWindow(QWidget *parent) :
         //OilRealChart();
         MainChart();
         qDebug() << "path database" << path;
+        ui->pushButton_2->setStyleSheet("border-image: url(:/Help.jpg) stretch;");
 }
 
 void MainWindow::on_AddShip_clicked()
@@ -330,4 +331,10 @@ void MainWindow::on_tableAllShips_doubleClicked(const QModelIndex &index)
         Parametr_ship *d = new Parametr_ship(this,NameShip);
         d->setModal(true);
         d->show();
+}
+
+void MainWindow::on_pushButton_2_clicked()
+{
+    // Absolute address of the selected file
+    QDesktopServices::openUrl(QUrl::fromLocalFile(qApp->applicationDirPath().append("/Help.doc")));
 }

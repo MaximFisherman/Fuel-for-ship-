@@ -45,3 +45,7 @@ FORMS    += \
     parametr_ship.ui \
     adminform.ui
 
+DISTFILES += \
+    help.png \
+    ../build-plot-examples-Static-Release/release/help.png
+
