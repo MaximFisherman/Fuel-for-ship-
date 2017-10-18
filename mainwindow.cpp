@@ -336,5 +336,5 @@ void MainWindow::on_tableAllShips_doubleClicked(const QModelIndex &index)
 void MainWindow::on_pushButton_2_clicked()
 {
     // Absolute address of the selected file
-    QDesktopServices::openUrl(QUrl::fromLocalFile(qApp->applicationDirPath().append("/Help.doc")));
+    QDesktopServices::openUrl(QUrl::fromLocalFile(qApp->applicationDirPath().append("/Help.pdf")));
 }

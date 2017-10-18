@@ -43,6 +43,8 @@ private slots:
 
     void on_RemoveEngine_clicked();
 
+    void on_pushButton_2_clicked();
+
 private:
     Ui::AddShip *ui;
 };

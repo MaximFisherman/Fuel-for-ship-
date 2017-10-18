@@ -16,13 +16,6 @@
   <layout class="QGridLayout" name="gridLayout_3">
    <item row="0" column="0">
     <layout class="QGridLayout" name="gridLayout_2">
-     <item row="1" column="0">
-      <widget class="QLabel" name="label_2">
-       <property name="text">
-        <string>Флаг</string>
-       </property>
-      </widget>
-     </item>
      <item row="3" column="1">
       <widget class="QLineEdit" name="Year"/>
      </item>
@@ -30,6 +23,13 @@
       <widget class="QLabel" name="label_7">
        <property name="text">
         <string>Тип судна</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QLabel" name="label_2">
+       <property name="text">
+        <string>Флаг</string>
        </property>
       </widget>
      </item>
@@ -43,23 +43,6 @@
      <item row="4" column="1">
       <widget class="QLineEdit" name="Height"/>
      </item>
-     <item row="4" column="0">
-      <widget class="QLabel" name="label_4">
-       <property name="text">
-        <string>Высота</string>
-       </property>
-      </widget>
-     </item>
-     <item row="3" column="0">
-      <widget class="QLabel" name="label_3">
-       <property name="text">
-        <string>Год постройки</string>
-       </property>
-      </widget>
-     </item>
-     <item row="0" column="1">
-      <widget class="QLineEdit" name="Owner"/>
-     </item>
      <item row="1" column="1">
       <widget class="QLineEdit" name="Flag"/>
      </item>
@@ -70,15 +53,28 @@
        </property>
       </widget>
      </item>
-     <item row="13" column="0" colspan="2">
-      <layout class="QGridLayout" name="gridLayout"/>
-     </item>
-     <item row="8" column="0">
-      <widget class="QLabel" name="label_8">
+     <item row="4" column="0">
+      <widget class="QLabel" name="label_4">
        <property name="text">
-        <string>Количество двигателей</string>
+        <string>Высота</string>
        </property>
       </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QLineEdit" name="Owner"/>
+     </item>
+     <item row="3" column="0">
+      <widget class="QLabel" name="label_3">
+       <property name="text">
+        <string>Год постройки</string>
+       </property>
+      </widget>
+     </item>
+     <item row="6" column="1">
+      <widget class="QLineEdit" name="Length"/>
+     </item>
+     <item row="16" column="0" colspan="2">
+      <layout class="QGridLayout" name="gridLayout"/>
      </item>
      <item row="5" column="1">
       <widget class="QLineEdit" name="Width"/>
@@ -90,8 +86,25 @@
        </property>
       </widget>
      </item>
-     <item row="6" column="1">
-      <widget class="QLineEdit" name="Length"/>
+     <item row="8" column="0">
+      <widget class="QLabel" name="label_8">
+       <property name="text">
+        <string>Количество двигателей</string>
+       </property>
+      </widget>
+     </item>
+     <item row="9" column="1">
+      <layout class="QHBoxLayout" name="horizontalLayout"/>
+     </item>
+     <item row="2" column="1">
+      <widget class="QLineEdit" name="NameShip"/>
+     </item>
+     <item row="2" column="0">
+      <widget class="QLabel" name="label_9">
+       <property name="text">
+        <string>Название судна</string>
+       </property>
+      </widget>
      </item>
      <item row="11" column="1">
       <widget class="QListWidget" name="TypeShip">
@@ -116,19 +129,6 @@
         </property>
        </item>
       </widget>
-     </item>
-     <item row="2" column="0">
-      <widget class="QLabel" name="label_9">
-       <property name="text">
-        <string>Название судна</string>
-       </property>
-      </widget>
-     </item>
-     <item row="2" column="1">
-      <widget class="QLineEdit" name="NameShip"/>
-     </item>
-     <item row="9" column="1">
-      <layout class="QHBoxLayout" name="horizontalLayout"/>
      </item>
      <item row="8" column="1">
       <widget class="QTableView" name="tableViewEngine"/>
@@ -164,7 +164,7 @@
        </item>
       </layout>
      </item>
-     <item row="12" column="1">
+     <item row="13" column="1">
       <layout class="QHBoxLayout" name="horizontalLayout_2">
        <item>
         <widget class="QPushButton" name="Confirm">
@@ -184,6 +184,13 @@
         </widget>
        </item>
       </layout>
+     </item>
+     <item row="12" column="1">
+      <widget class="QPushButton" name="pushButton_2">
+       <property name="text">
+        <string>Прикрепить файлы</string>
+       </property>
+      </widget>
      </item>
     </layout>
    </item>

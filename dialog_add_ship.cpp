@@ -3,7 +3,7 @@
 #include "ui_dialog_add_ship.h"
 #include "QMessageBox"
 #include "db.h"
-
+#include <QFileDialog>
 
 AddShip::AddShip(QWidget *parent) :
     QDialog(parent),
@@ -181,4 +181,24 @@ void AddShip::on_RemoveEngine_clicked()
 
     db.CloseConection();
     AddEngine();
+}
+
+void AddShip::on_pushButton_2_clicked()
+{
+    QString path = QFileDialog::getOpenFileName(0,QDir::homePath());
+    QFile file(path);
+    qDebug() << "Path file selected file" << path;
+
+       QString fileName = QFileInfo(path).fileName();
+       QString newDir = qApp->applicationDirPath().append("/UserFile/");
+       file.copy(newDir + fileName);
+
+    if(path != "")
+    {
+        QMessageBox msgBox;
+        msgBox.setText("Ваш файл сохранен в дериктории программы в файле User file, там вы можете его посмотреть");
+        msgBox.exec();
+    }
+
+
 }

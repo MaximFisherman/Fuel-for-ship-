@@ -209,6 +209,34 @@ void Parametr_ship::MainChartResourse()
     // Add data:
     QVector<double> Date;
     Date  << OilRealChart() << OilIdealChart() << FuelTankChart();
+    if(OilRealChart()>=100)
+    {
+          QMessageBox msgBox;
+          msgBox.setText("Моторесурс масла полностью израсходован");
+          msgBox.exec();
+    }
+
+    if(OilRealChart()>=50 && !OilRealChart()>=100)
+    {
+          QMessageBox msgBox;
+          msgBox.setText("Моторесурс масла израсходован более чем на 50% рекомендуется заменить");
+          msgBox.exec();
+    }
+
+    if(FuelTankChart()>=100)
+    {
+          QMessageBox msgBox;
+          msgBox.setText("Бак корабля пуст");
+          msgBox.exec();
+    }
+
+    if(FuelTankChart()>=50 && !FuelTankChart()>=100)
+    {
+          QMessageBox msgBox;
+          msgBox.setText("Топливо израсходованно более чем на 50%");
+          msgBox.exec();
+    }
+
 
     Bars->setData(ticks, Date);
 
